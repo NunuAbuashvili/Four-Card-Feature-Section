@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --opal-color: #ea5454;
+  --turquoise-color: #44d3d2;
+  --orange-color: #fcae4a;
+  --blue-color: #549ef2;
+  --independence-color: #4d4f62;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: var(--independence-color);
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.17px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 275;
+}
+
+p {
+  font-weight: 400;
+  opacity: 50%;
+}
+
+.tool-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.tool-description {
+  font-size: 1em;
+  line-height: 1.44rem;
+  letter-spacing: 0.09px;
+}
+
+/* Mobile header */
+header p {
+  font-size: 0.94rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 19.44rem;
+  justify-content: center;
+  margin: 5.25rem auto 4.75rem auto;
+}
+
+header h1 {
+  margin-bottom: 1em;
+}
+
+/* Mobile tools */
+#tools {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  row-gap: 1.56rem;
+  max-width: 19.44rem;
+  margin: 0 auto 6em auto;
+}
+
+.tool-box {
+  height: 13.9rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  padding: 27px 28px;
+  box-shadow: 0px 15px 30px -11px rgb(131 166 210 / 50%);
+}
+
+.icon {
+  width: 24%;
+  height: auto;
+  align-self: flex-end;
+  margin-top: 25px;
+}
+
+.supervisor {
+  border-top: 3.55px solid var(--turquoise-color);
+}
+
+.team-builder {
+  border-top: 3.55px solid var(--opal-color);
+}
+
+.karma {
+  border-top: 3.55px solid var(--orange-color);
+}
+
+.calculator {
+  border-top: 3.55px solid var(--blue-color);
+}
+
+@media only screen and (min-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 3em;
+    line-height: 3.375rem;
+    letter-spacing: 0.25px;
+  }
+
+  header {
+    max-width: 33.75rem;
+  }
+
+  .tool-box {
+    max-height: 15.625rem;
+    max-width: 21.875rem;
+  }
+
+  #tools {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, 125px);
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+    margin: 0 auto 5rem auto;
+  }
+
+  .team-builder {
+    grid-area: 1/2/3/3;
+  }
+
+  .supervisor {
+    grid-area: 2/1/4/2;
+  }
+
+  .karma {
+    grid-area: 3/2/5/3;
+  }
+
+  .calculator {
+    grid-area: 2/3/4/4;
+  }
+}
